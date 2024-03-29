@@ -5,18 +5,13 @@ from tqdm import tqdm
 
 
 def linear_beta_schedule(timesteps):
-    """
-    beta schedule
-    """
+
     scale = 1000 / timesteps
     beta_start = scale * 0.0001
     beta_end = scale * 0.02
     return torch.linspace(beta_start, beta_end, timesteps, dtype=torch.float64)
 def cosine_beta_schedule(timesteps, s=0.008):
-    """
-    cosine schedule
-    as proposed in https://arxiv.org/abs/2102.09672
-    """
+
     steps = timesteps + 1
     x = torch.linspace(0, timesteps, steps, dtype=torch.float64)
     alphas_cumprod = torch.cos(((x / timesteps) + s) / (1 + s) * math.pi * 0.5) ** 2
@@ -150,16 +145,6 @@ class GaussianDiffusion:
         # sample new images
         return self.p_sample_loop(model, shape=(batch_size, channels, image_size, image_size))
 
-    # def train_losses(self, model, x_start, t):
-    #     # compute train losses
-    #     # generate random noise
-    #     noise = torch.randn_like(x_start)
-    #     # get x_t
-    #     x_noisy = self.q_sample(x_start, t, noise=noise)
-    #     denoise_images = model(x_noisy, t)
-    #     predicted_noise=x_noisy-denoise_images
-    #     loss = F.mse_loss(x_start,denoise_images)
-    #     return loss,denoise_images,predicted_noise,x_noisy
 
     def train_losses(self, model, x_start,t,x_target=None):
         # compute train losses

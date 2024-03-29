@@ -33,7 +33,6 @@ class MyDataset(Dataset):
 
 
         # Data augmentation sequence
-        # 训练过程中数据增强的序列
         self.flip = iaa.SomeOf((1, 4), [
             iaa.Fliplr(0.5),
             iaa.Flipud(0.1),
@@ -81,7 +80,6 @@ class MyDataset(Dataset):
         img = self.to_tensor(img)
 
 
-        # 在训练模式下，不返回标签
         if self.mode == 'train' and self.data_type == 'unhealthy':
             return img
         elif self.mode == 'train' and self.data_type == 'healthy_unhealthy':
