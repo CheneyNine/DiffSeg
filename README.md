@@ -1,6 +1,7 @@
 # DDMIS: A Medical Image Segmentation Model Based on Diffusion Discrepancy
 
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg](http://makeapullrequest.com)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen
+)](http://makeapullrequest.com)
 <!-- TOC -->
 
 > Authors: Zhihao Shuai, Yinan Chen, Shunqiang Mao, Yihan Zhou, Xiaohong Zhang
