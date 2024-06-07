@@ -4,8 +4,6 @@
 )](http://makeapullrequest.com)
 <!-- TOC -->
 
-> Authors: Zhihao Shuai, Yinan Chen, Shunqiang Mao, Yihan Zhou, Xiaohong Zhang
-
 This is a official pytorch implementation of DDMIS: A Medical Image Segmentation Model Based on Diffusion Discrepancy.
 
 ## Requirements
